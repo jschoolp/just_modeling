@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just Voxel!</title>
+  <link rel="stylesheet" href="modeling.css">
+  <link rel="icon" type="image/x-icon" href="static/favico.ico">
+</head>
+<body>
+  <div id="controls">
+    <button id="create-mode" class="tool-button active"><img src="static/plus.png" alt=""></button>
+    <button id="delete-mode" class="tool-button"><img src="static/minus.png" alt=""></button>
+    <button id="clear-cube"><img src="static/trash.png" alt=""></button>
+    <div id="palette">
+      <span>Палітра:</span>
+      <div id="color-options"></div>
+      <div id="random-color" class="color-option random">🎲</div>
+    </div>
+  </div>
+  <div id="scene-container"></div>
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+  <script src="3d.js"></script>
+</body>
+</html>
