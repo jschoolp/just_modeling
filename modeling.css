@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Pixel';
+    src: url('static/Pixel.ttf');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #305473;
+}
+
+#scene-container {
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid #305473;
+    box-sizing: border-box;
+}
+
+#controls {
+    position: absolute;
+    top: 16px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    border-radius: 4px;
+    border: none;
+}
+
+button img {
+    width: 32px;
+    height: 32px;
+}
+
+.tool-button.active {
+    background-color: #ffeb3b; /* Жовтий колір для активної кнопки */
+    border: 2px solid #ff9800; /* Помаранчева обводка */
+}
+
+#palette {
+    display: flex;
+    width: 34vw;
+    font-size: 16pt;
+    height: 48px;
+    align-items: center;
+    border-radius: 4px;
+    background-color: white;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Pixel';
+}
+
+#color-options {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.color-option {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.color-option.selected {
+    border: 4px solid #ff9800;
+}
+
+#random-color {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border: 1px solid black;
+    background-color: #f0f0f0;
+  }
+  
+  #random-color.selected {
+    border: 4px solid #ff9800;
+  }
+  
