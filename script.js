@@ -108,10 +108,10 @@ function handlePick(pickResult) {
     if (pickedMesh && cubes.includes(pickedMesh)) {
       const material = new BABYLON.StandardMaterial("material", scene);
       if (selectedColor) {
-        material.diffuseColor = new BABYLON.Color3.FromHexString(selectedColor);
+        material.diffuseColor = BABYLON.Color3.FromHexString(selectedColor);
       } else {
         const randomColor = colors[Math.floor(Math.random() * colors.length)];
-        material.diffuseColor = new BABYLON.Color3.FromHexString(randomColor);
+        material.diffuseColor = BABYLON.Color3.FromHexString(randomColor);
       }
       pickedMesh.material = material;
     }
@@ -124,7 +124,7 @@ function createCubeFromData(position, color) {
   cube.position = new BABYLON.Vector3(position.x, position.y, position.z);
 
   const material = new BABYLON.StandardMaterial("material", scene);
-  material.diffuseColor = new BABYLON.Color3.FromHexString(color);
+  material.diffuseColor = BABYLON.Color3.FromHexString(color);
   cube.material = material;
   cube.enableEdgesRendering();
   cube.edgesWidth = 8;
@@ -145,14 +145,14 @@ function createCube(position) {
   newCube.position = position;
 
   const material = new BABYLON.StandardMaterial("material", scene);
-  
+
   if (selectedColor) {
-    material.diffuseColor = new BABYLON.Color3.FromHexString(selectedColor);
+    material.diffuseColor = BABYLON.Color3.FromHexString(selectedColor);
   } else {
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    material.diffuseColor = new BABYLON.Color3.FromHexString(randomColor);
+    material.diffuseColor = BABYLON.Color3.FromHexString(randomColor);
   }
-  
+
   newCube.material = material;
   newCube.enableEdgesRendering();
   newCube.edgesWidth = 8;
